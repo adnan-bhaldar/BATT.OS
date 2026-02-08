@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="midnight">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" href="assets/img/favicon.svg">
+    <title>BATT.OS | Energy Sync</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=JetBrains+Mono:wght@300;800&display=swap">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="flex antialiased">
+    <div class="alert-pulse"></div>
+
+    <div id="mobile-guard" class="glass p-10">
+        <div class="glass p-12 rounded-[3rem] text-center">
+            <h2 class="text-2xl font-black mb-4 uppercase font-[Orbitron]">⚠️ Display Error</h2>
+            <p class="text-[10px] opacity-40 tracking-[0.3em] uppercase">Desktop Link Required</p>
+        </div>
+    </div>
+
+    <main class="flex-1 flex flex-col items-center justify-center p-12 z-10">
+        <div class="glass w-full max-w-6xl p-24 rounded-[4.5rem] text-center relative overflow-hidden">
+            <h1 id="pctText" class="hero-pct mb-10">0%</h1>
+
+            <div class="flex items-center justify-center gap-6 mb-16">
+                <span id="statusIcon" class="status-emoji bounce-anim">⚙️</span>
+                <p id="statText" class="text-[14px] uppercase tracking-[0.5em] font-extrabold opacity-60">Initializing
+                    Engine</p>
+            </div>
+
+            <div class="battery-rail max-w-3xl mx-auto">
+                <div id="batteryFill" class="battery-fill" style="width: 0%;"></div>
+            </div>
+        </div>
+    </main>
+
+    <aside class="w-[450px] glass m-10 rounded-[4rem] p-12 flex flex-col hidden lg:flex">
+        <div class="mb-14 border-l-4 border-[var(--accent)] pl-6">
+            <h3 class="text-[12px] font-black uppercase tracking-[0.5em] opacity-70 font-[Orbitron]"><span
+                    class="btn-emoji">🛠️</span> SYSTEM CORE</h3>
+        </div>
+        <div class="flex-1 space-y-4" id="themeOptions">
+            <button data-t="midnight"
+                class="theme-btn glass w-full p-7 rounded-[2.5rem] text-left text-[12px] font-black uppercase tracking-widest flex justify-between items-center transition-all font-[Orbitron] group">
+                <span class="flex items-center gap-4"><span class="btn-emoji">🌑</span> MIDNIGHT</span>
+                <span class="opacity-30 group-hover:opacity-100">01</span>
+            </button>
+            <button data-t="solar"
+                class="theme-btn glass w-full p-7 rounded-[2.5rem] text-left text-[12px] font-black uppercase tracking-widest flex justify-between items-center transition-all font-[Orbitron] group">
+                <span class="flex items-center gap-4"><span class="btn-emoji">☀️</span> SOLAR</span>
+                <span class="opacity-30 group-hover:opacity-100">02</span>
+            </button>
+            <button data-t="cyber"
+                class="theme-btn glass w-full p-7 rounded-[2.5rem] text-left text-[12px] font-black uppercase tracking-widest flex justify-between items-center transition-all font-[Orbitron] group">
+                <span class="flex items-center gap-4"><span class="btn-emoji">🟢</span> NEON</span>
+                <span class="opacity-30 group-hover:opacity-100">03</span>
+            </button>
+            <button data-t="sunset"
+                class="theme-btn glass w-full p-7 rounded-[2.5rem] text-left text-[12px] font-black uppercase tracking-widest flex justify-between items-center transition-all font-[Orbitron] group">
+                <span class="flex items-center gap-4"><span class="btn-emoji">🌆</span> SUNSET</span>
+                <span class="opacity-30 group-hover:opacity-100">04</span>
+            </button>
+            <button data-t="forest"
+                class="theme-btn glass w-full p-7 rounded-[2.5rem] text-left text-[12px] font-black uppercase tracking-widest flex justify-between items-center transition-all font-[Orbitron] group">
+                <span class="flex items-center gap-4"><span class="btn-emoji">🌲</span> FOREST</span>
+                <span class="opacity-30 group-hover:opacity-100">05</span>
+            </button>
+        </div>
+    </aside>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
